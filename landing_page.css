@@ -1,0 +1,461 @@
+@font-face {
+    font-family: 'trebuchet_ms_regular';
+    src: url('/redesign/fonts/trebuchet_ms_regular.ttf') format("truetype");
+}
+
+body {
+    padding:0;
+    margin:0;
+    border-collapse: collpase;
+    font-family: trebuchet_ms_regular;
+    font-size: calc(15px + 0.390625vw);
+}
+
+a {
+    text-decoration: none !important;
+}
+  
+
+.landing_page {
+    width: 100vw;
+    min-height: 30vh;
+    max-height: auto;
+    background-image: url(/redesign/graphics/front-layer.svg), url(/redesign/graphics/middle-layer.svg), linear-gradient(to right, #4D448A, #4D448A);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100% auto, 100% auto, 100% auto;
+    background-position: bottom, bottom, bottom;
+    box-sizing: border-box;
+    padding: 4.167vw 4.167vw 4.167vw 4.167vw;
+}
+
+.page-lightgrey {
+    width: 100vw;
+    min-height: 50vh;
+    height: auto;
+    background: #F5F5EF;
+    box-sizing: border-box;
+    padding: 5em 5em 5em 5em;
+}
+
+.page-grey {
+    width: 100vw;
+    min-height: 50vh;
+    height: auto;
+    background: #e1dfe2;
+    box-sizing: border-box;
+    padding: 5em 5em 5em 5em;
+}
+
+.page-purple {
+    width: 100vw;
+    height: auto;
+    background-image: url(/redesign/graphics/front-layer.svg), url(/redesign/graphics/middle-layer.svg), linear-gradient(to right, #4D448A, #4D448A);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100% auto, 100% auto, cover;
+    background-position: bottom, bottom, bottom;
+    box-sizing: border-box;
+    padding: 5em 5em 5em 5em;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 22.5px;
+}
+
+.page-number {
+    color: #4D6FB4;
+    font-size: max(25px, 4.948vw);
+    padding: 0 2.704vw 0 0;
+}
+
+.page-number-impressum {
+    color: white;
+    font-size: max(25px, 4.948vw);
+    padding: 0 2.704vw 0 0;
+}
+
+.page-heading {
+    color: black;
+    font-size: max(20px, 3.646vw);
+}
+
+.page-heading-impressum {
+    color: white;
+    font-size: max(20px, 3.646vw);
+}
+
+.sponsor-flex-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.sponsor-flex-item {
+    color: white;
+    font-size: max(15px, 1.042vw);
+    padding: 0 0 max(20px, 2.083vw) 0;
+}
+
+.sponsor-flex-icon {
+    height: 20px;
+    width: auto;
+    color: white;
+}
+
+.logo {
+    height: auto;
+    width: 40%;
+}
+
+.nav-container {
+    top: 0;
+    padding: 4.167vw 0 0 0;
+}
+
+.nav-item {
+    color: white;
+    padding: 0 0.521vw 0 0.521vw;
+    font-size: max(12px, 1.042vw);
+}
+
+.top-contact-bubble {
+    height: 5em;
+    padding: 1em;
+    overflow: hidden;
+    background-color: white;
+    border: solid 2px #584E98;
+    border-radius: 5em;
+    position: fixed;
+    bottom: max(10px, 2.604vw);
+    right: max(10px, 2.604vw);
+    z-index: 2;
+    font-size: max(12px, 0.781vw);
+}
+
+.top-contact-bubble > * {
+    float: left;
+    color: #584E98;
+    text-align: center;
+}
+
+#expend {
+    display:none;  
+  }
+  
+  #expend + .expended-content {
+    max-width:0px;
+    max-height:0px;
+    overflow:hidden;
+    transition:all 1s ease;
+  }
+  
+  #expend:checked + .expended-content {
+    max-width: max(110px, 29.333vw);
+    max-height:250px;
+    padding: 1em 5px 0 0;
+  }
+  
+  label {
+    text-decoration:underline;
+    cursor:pointer;
+    padding-top: 1em;
+  }
+  
+  label:hover {
+    text-decoration:none;  
+  }
+
+.topnav {
+    overflow: hidden;
+    background-color: #584E98;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: max(5px, 1.042vw) max(6px, 1.042vw);
+    font-size: max(12px, 1.042vw);
+    font-weight: 50;
+}
+
+.topnav a:hover {
+    color: #F5F5EF;
+}
+
+.vert-main-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.vert-text-flex-container-about-us {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1.2 1 0;
+    padding: 0 0 65px 0;
+    gap: 15px;
+}
+
+.vert-flex-container-impressum {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1.2 1 0;
+    gap: 15px;
+}
+
+.vert-main-container-page-6 {
+    justify-content: center;
+    padding: 65px 0 65px 0;
+    gap: 15px;
+}
+
+.vert-flex-item {
+    color: black;
+}
+
+.hori-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hori-flex-container-about-us {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hori-flex-container-impressum {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.vert-item-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.vert-item-flex-container-page-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 15px;
+    border-radius: 40px;
+    box-shadow: 10px 10px 0px #a6abb7;
+}
+
+.vert-item-flex-container-about-us {
+    display: flex;
+    flex: 1 0 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.vert-item-flex-container-impressum {
+    display: flex;
+    flex: 1 0 0;
+}
+
+.vert-item-flex-container-page-2:hover .item-image-page-2 {
+    filter: blur(10px);
+}
+
+.vert-item-flex-container-page-2:hover .item-caption-page-2 {
+    display: none !important;
+}
+
+.vert-item-flex-container-page-2:hover .item-caption-page-2-hover {
+    display: block;
+}
+
+.item-image {
+    width: max(100px, 11.719vw);
+    height: auto;
+    background-color:#4D6FB4;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px #a6abb7;
+}
+
+.item-image-page-2 {
+    width: max(100px, 11.719vw);
+    height: auto;
+    padding: 37.5px;
+    background-color:#4D6FB4;
+    border-radius: 20px;
+    transition: 50ms filter ease-out 30ms
+}
+
+.item-image-page-4 {
+    width: max(100px, 11.719vw);
+    height: auto;
+    padding: 18.25px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.item-caption {
+    color: black;
+    font-size: max(18px, 1.563vw);
+    text-align: center;
+}
+
+.item-subcaption {
+    overflow-wrap: break-word;
+    color: #584E98;
+    font-size: max(15px, 1.042vw);
+    text-align: center;
+}
+
+.item-text {
+    overflow-wrap: break-word;
+    color: black;
+    font-size: max(15px, 0.781vw);
+    text-align: left;
+}
+
+.item-caption-page-2 {
+    display: block;
+    color: white;
+    font-size: max(20px, 1.823vw);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item-caption-page-2-hover {
+    display: none;
+    color: white;
+    font-size: max(18px, 1.563vw);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-us-caption {
+    color: black;
+    font-size: max(20px, 2.083vw);
+    padding: 0 0 max(20px, 2.083vw) 0;
+}
+
+.about-us-text {
+    overflow-wrap: break-word;
+    color: black;
+    font-size: max(15px, 1.042vw);
+}
+
+.about-us-image {
+    width: max(25em, 31.25vw);
+    height: auto;
+}
+
+.impressum-image {
+    width: 70%;
+    height: auto;
+}
+
+.about-us-quote {
+    display: block;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 50;
+    line-height: 140%;
+    font-size: max(18px, 1.5vw);
+    text-align: center;
+    position: absolute;
+}
+
+.impressum-table > table {
+    color: white;
+    font-size: max(15px, 1.042vw);
+    font-weight: 50;
+    border-spacing: 10px;
+}
+
+td {
+    vertical-align: top;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #DFE3FF;
+    color: black;
+    font-size: max(15px, 1.563vw);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 12.5px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.8s;
+    margin-bottom: 10px;
+}
+  
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #A3AAD7;
+}
+  
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 12.5px;
+    background-color: white;
+    color: black;
+    font-size: max(15px, 1.563vw);
+    border-radius: 15px;
+    display: none;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+
+/*
+Condition to apply styles only at a certain width
+*/
+@media only screen and (min-width: 770px) {
+    .vert-main-flex-container {
+        padding: 130px 0 130px 0;
+    }
+}
