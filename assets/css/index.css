@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'trebuchet_ms_regular';
-    src: url('/fonts/trebuchet_ms_regular.ttf') format("truetype");
+    src: url('/assets/fonts/trebuchet_ms_regular.ttf') format("truetype");
 }
 
 body {
@@ -20,7 +20,7 @@ a {
     width: 100vw;
     min-height: 30vh;
     max-height: auto;
-    background-image: url(/graphics/front-layer.svg), url(/graphics/middle-layer.svg), linear-gradient(to right, #4D448A, #4D448A);
+    background-image: url(/assets/img/front-layer.svg), url(/assets/img/middle-layer.svg), linear-gradient(to right, #4D448A, #4D448A);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 100% auto, 100% auto, 100% auto;
     background-position: bottom, bottom, bottom;
@@ -49,7 +49,7 @@ a {
 .page-purple {
     width: 100vw;
     height: auto;
-    background-image: url(/graphics/front-layer.svg), url(/graphics/middle-layer.svg), linear-gradient(to right, #4D448A, #4D448A);
+    background-image: url(/assets/img/front-layer.svg), url(/assets/img/middle-layer.svg), linear-gradient(to right, #4D448A, #4D448A);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 100% auto, 100% auto, cover;
     background-position: bottom, bottom, bottom;
