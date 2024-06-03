@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Landing Page</title>
+        <title>Nightline Karlsruhe</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/index.css">
     </head>
     <body>
         <a name="home" id="home"><strong></strong></a>
-        <div class="landing_page">
+        <div class="landing_page" id="landing_page">
             <div class="vert-main-flex-container">
                 <div class="sponsor-flex-container">
                     <div class="sponsor-flex-item">Das studentische Zuhörerangebot</div>
@@ -279,5 +279,27 @@
                 });
             });
         });
+
+        function checkTimeFrame() {
+            const now = new Date();
+            const day = now.getDay(); // Sunday - Saturday : 0 - 6
+            const hour = now.getHours(); // hours: 0 - 24
+            const landingPageDiv = document.getElementById('landing_page');
+
+            // Wednesday 9pm - 0am, Sunday 9pm - 0am
+            if ((day === 3 && hour >= 21 && hour < 0) || (day === 0 && hour >= 21 && hour < 0)) {
+                landingPageDiv.classList.remove('landing_page');
+                landingPageDiv.classList.add('landing_page_on_duty');
+            } else {
+                landingPageDiv.classList.remove('landing_page_on_duty');
+                landingPageDiv.classList.add('landing_page');
+            }
+        }
+
+        // Check every minute (60000 milliseconds)
+        setInterval(checkTimeFrame, 60000);
+
+        // Initial check when the page loads
+        checkTimeFrame();
     </script>
 </html>

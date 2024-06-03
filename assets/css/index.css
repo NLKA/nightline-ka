@@ -28,6 +28,18 @@ a {
     padding: 4.167vw 4.167vw 4.167vw 4.167vw;
 }
 
+.landing_page_on_duty {
+    width: 100vw;
+    min-height: 30vh;
+    max-height: auto;
+    background-image: url(/assets/img/stars.svg), url(/assets/img/front-layer.svg), url(/assets/img/middle-layer.svg), linear-gradient(to right, #4D448A, #4D448A);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100% auto, 100% auto, 100% auto;
+    background-position: bottom, bottom, bottom;
+    box-sizing: border-box;
+    padding: 4.167vw 4.167vw 4.167vw 4.167vw;
+}
+
 .page-lightgrey {
     width: 100vw;
     min-height: 50vh;
