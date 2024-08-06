@@ -11,4 +11,5 @@ If you want to change somthing on the website like the name of the board service
 All additional content, e.g. images o fonts can be found in the "assests" folder. If you need to exchange a picture, exchange it there.
 
 
-If you want to disable the sparkling stars on the website comment out the 
+If you want to disable the sparkling stars on the website you can set the variable "telefoneMannedToday" in the "Make your changes here" section 
+in line 258.
