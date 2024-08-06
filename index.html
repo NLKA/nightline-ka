@@ -253,6 +253,14 @@
     </div>
     </body>
     <script>
+	//================Make your changes here===============
+	    
+	const telefoneMannedToday = true; 	// Choose if the telefone is manned (true) or not (false)
+	const dutyDays = [0,3];			// Choose the days of duty. Sunday - Saturday : 0 - 6
+	const beginDutyHour = 21;	  	// Choose the beginning hour. Hours: 0 - 23
+	const endDutyHour = 0;			// And here the end hour.
+
+	//=====================================================
         var acc = document.getElementsByClassName("accordion");
         var i;
 
@@ -285,11 +293,11 @@
         function checkTimeFrame() {
             const now = new Date();
             const day = now.getDay(); // Sunday - Saturday : 0 - 6
-            const hour = now.getHours(); // hours: 0 - 24
+            const hour = now.getHours(); // hours: 0 - 23
             const landingPageDiv = document.getElementById('landing_page');
 
             // Wednesday 9pm - 0am, Sunday 9pm - 0am
-            if ((day === 3 && hour >= 21 && hour < 0) || (day === 0 && hour >= 21 && hour < 0)) {
+            if (itsDutyTime() && telefoneMannedToday) {
                 landingPageDiv.classList.remove('landing_page');
                 landingPageDiv.classList.add('landing_page_on_duty');
             } else {
@@ -297,6 +305,19 @@
                 landingPageDiv.classList.add('landing_page');
             }
         }
+
+	function itsDutyTime() {
+		if(hour < beginDutyHour && hour >= endDutyHour) {
+			return false;
+		}
+		for (i = 0; i < dutyDays.lenght; i++) {
+			if(day == dutyDays[i]) {
+				return true;
+			}
+			
+		}
+		return false;
+	}
 
         // Check every minute (60000 milliseconds)
         setInterval(checkTimeFrame, 60000);
